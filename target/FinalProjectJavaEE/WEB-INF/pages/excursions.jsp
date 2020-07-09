@@ -12,6 +12,12 @@
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
+<c:if test="${user.role=='admin'}">
+    <div class="center">
+        <a href="/FinalProjectJavaEE/admin/create_excursion_page" class="margin-right"><fmt:message key="createExcursion"/></a>
+    </div>
+    <br>
+</c:if>
 <table class="table center" style="width:50%">
     <thead>
     <th><fmt:message key="port"/></th>
